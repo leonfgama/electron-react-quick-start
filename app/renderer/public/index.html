@@ -6,7 +6,7 @@
     <title>Hello World ❤ Electron, React, & Webpack</title>
 </head>
 
-<body>
+<body style='margin:0;'>
     <div id="react-root" />
 </body>
 
@@ -14,9 +14,18 @@
 <script src="./../../../build/entry.bundle.js"></script>
 
 <!--"Live" bundle that's served from webpack-dev-server. `npm run watch` should be running as an external process-->
-<script src="http://localhost:8182/build/entry.bundle.js"></script>
+<!--<script src="http://localhost:8182/build/entry.bundle.js"></script>-->
 
 <!--A static script from webpack-dev-server that allows for hot reloading of the above bundle-->
-<script src="http://localhost:8182/webpack-dev-server.js"></script>
+<!--<script src="http://localhost:8182/webpack-dev-server.js"></script>-->
+<script>
+	document.addEventListener("keydown", function (e) {
+		if (e.which === 123) {
+			require('remote').getCurrentWindow().toggleDevTools();
+		} else if (e.which === 116) {
+			location.reload();
+		}
+	});
+</script>
 
 </html>

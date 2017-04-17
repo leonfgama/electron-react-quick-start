@@ -6,10 +6,9 @@ const BrowserWindow = electron.BrowserWindow;
 let mainWindow;
 
 function createWindow() {    
-    mainWindow = new BrowserWindow({ width: 1360, height: 800 });
+    mainWindow = new BrowserWindow({ width: 1300, height: 800 });
     mainWindow.setMenu(null);
     mainWindow.loadURL('file://' + process.cwd() + '/app/renderer/public/index.html');
-    mainWindow.webContents.openDevTools();
     mainWindow.on('closed', function () {
         mainWindow = null;
     });
