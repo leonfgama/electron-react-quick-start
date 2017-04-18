@@ -15,17 +15,12 @@ class Main extends React.Component {
             open: false
         };
 
-        this.handleToggle = this.handleToggle.bind(this);
-        this.handleClose = this.handleClose.bind(this);
+        // this.handleToggle = this.handleToggle.bind(this);
+        // this.handleClose = this.handleClose.bind(this);
     }
-
-    handleToggle() {
-        this.setState({ open: !this.state.open });
-    }
-
-    handleClose() {
-        this.setState({open: false});
-    } 
+ 
+    handleToggle = () => this.setState({open: !this.state.open});
+    handleClose = () => this.setState({open: false});
 
 
     render() {

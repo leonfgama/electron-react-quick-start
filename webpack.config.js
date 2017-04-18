@@ -61,7 +61,7 @@ module.exports = {
                 include: path.resolve(__dirname, "app"),
                 loader: 'babel',
                 query: {
-                    presets: ['react', 'es2015']
+                    presets: ['react', 'es2015', 'stage-0']
                 }
             }]
     },
@@ -84,5 +84,5 @@ module.exports = {
 
     plugins: [
         new webpack.HotModuleReplacementPlugin()
-    ]
+    ]    
 }
