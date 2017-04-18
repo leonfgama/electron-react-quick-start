@@ -12,16 +12,30 @@ class Main extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            open: false
+            open: false,
+            menuItems: [{
+                key: 1,
+                text: 'Menu 1'
+            },            
+            {
+                key: 2,
+                text: 'Menu 2'
+            },
+            {
+                key: 3,
+                text: 'Menu 3'
+            },
+            {
+                key: 4,
+                text: 'Menu 4'
+            }]
         };
-
-        // this.handleToggle = this.handleToggle.bind(this);
-        // this.handleClose = this.handleClose.bind(this);
     }
  
     handleToggle = () => this.setState({open: !this.state.open});
     handleClose = () => this.setState({open: false});
 
+    
 
     render() {
         return (
@@ -36,7 +50,8 @@ class Main extends React.Component {
                         <DrawerUndockedExample
                         open={this.state.open}
                         handleClose={this.handleClose}
-                        handleToggle={this.handleToggle}   />
+                        handleToggle={this.handleToggle}
+                        menuItems={this.state.menuItems}   />
                     </div>
                 </div>
 
